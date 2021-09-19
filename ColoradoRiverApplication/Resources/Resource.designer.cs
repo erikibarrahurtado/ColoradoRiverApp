@@ -3636,19 +3636,19 @@ namespace ColoradoRiverApplication
 			public const int customPanel = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int damImageView = 2131230808;
+			public const int damDescriptionTextView = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int damNameTextView = 2131230809;
+			public const int damImageView = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int decor_content_parent = 2131230810;
+			public const int damNameTextView = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int default_activity_button = 2131230811;
+			public const int decor_content_parent = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int descriptionTextView = 2131230812;
+			public const int default_activity_button = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
 			public const int design_bottom_sheet = 2131230813;

@@ -23,7 +23,7 @@
 		android:text="Description.lorem asdfasdfasdf"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/descriptionTextView"
+		android:id="@+id/damDescriptionTextView"
 		android:textColor="@android:color/black"
 		android:paddingTop="20dp"
 		android:textSize="12dp"
