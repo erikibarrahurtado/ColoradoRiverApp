@@ -18,7 +18,9 @@
         android:id="@+id/damNameButton"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:textSize="25dp">
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#23cfa7">
     </Button>
     
 </LinearLayout>
