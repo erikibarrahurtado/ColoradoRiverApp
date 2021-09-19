@@ -13,7 +13,7 @@
 		android:layout_height="500dp"
 		android:layout_marginTop="10dp"
 		android:id="@+id/damImageView"
-		android:src="@drawable/hooverdam"
+		android:src="@drawable/hooverDamyearDetails"
 		/>
 	<TextView
 		android:text="Dam Name"
