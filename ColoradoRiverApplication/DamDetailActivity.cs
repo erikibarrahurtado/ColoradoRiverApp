@@ -48,6 +48,7 @@ namespace ColoradoRiverApplication
         {
             _damNameTextView.Text = _selectedDam.Name;
             _damDescriptionTextView.Text = _selectedDam.Description;
+           
         }
     }
 }
