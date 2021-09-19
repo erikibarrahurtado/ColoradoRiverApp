@@ -102,11 +102,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\HooverDam.jpg">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\HooverDamYearDetails.png">
+    <AndroidResource Include="Resources\drawable\HooverDamImage.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

@@ -48,6 +48,8 @@ namespace ColoradoRiverApplication
         {
             _damNameTextView.Text = _selectedDam.Name;
             _damDescriptionTextView.Text = _selectedDam.Description;
+            int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.ImageName).GetValue(null);
+            _damImageView.SetImageResource(resImage);
            
         }
     }
