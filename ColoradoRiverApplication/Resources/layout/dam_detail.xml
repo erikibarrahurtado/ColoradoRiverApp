@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/patternwide"
+    >
+	<ImageView
+		
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_marginTop="10dp"
+		android:id="@+id/damImageView" />
+	<TextView
+		android:text="Dam Name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/damNameTextView"
+		android:textColor="@android:color/black"
+		android:paddingTop="20dp"
+		android:textSize="20dp"/>
+	<TextView
+		android:text="Description.lorem asdfasdfasdf"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/descriptionTextView"
+		android:textColor="@android:color/black"
+		android:paddingTop="20dp"
+		android:textSize="12dp"
+		android:editable="false"/>
+	<Button
+		android:text="Go back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="20dp"
+		android:width="200dp"
+		android:backgroundTint="#23cfa7"
+		android:id="@+id/goBackButton" />
+
+</LinearLayout>
