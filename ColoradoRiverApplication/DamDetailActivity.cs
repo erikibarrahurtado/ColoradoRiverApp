@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using ColoradoRiverMobile.Core.Models;
 using ColoradoRiverMobile.Core.Repository;
+using ColoradoRiverMobile.Core.Services;
 
 namespace ColoradoRiverApplication
 {
@@ -24,6 +25,7 @@ namespace ColoradoRiverApplication
         private TextView _damNameTextView;
         private TextView _damDescriptionTextView;
         private Button _goBackButton;
+        private RaspberryPiService _rpiService;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -46,6 +48,8 @@ namespace ColoradoRiverApplication
 
         private void _goBackButton_Click(object sender, EventArgs e)
         {
+            _rpiService.Connect();
+            _rpiService.TurnOffFan();
             this.Finish();
         }
 
@@ -63,6 +67,7 @@ namespace ColoradoRiverApplication
             _damDescriptionTextView.Text = _selectedDam.Description;
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.ImageName).GetValue(null);
             _damImageView.SetImageResource(resImage);
+            _rpiService = new RaspberryPiService();
            
         }
     }
