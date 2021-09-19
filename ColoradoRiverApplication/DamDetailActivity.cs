@@ -15,7 +15,7 @@ using ColoradoRiverMobile.Core.Repository;
 
 namespace ColoradoRiverApplication
 {
-    [Activity(Label = "DamDetailActivity", MainLauncher = true)]
+    [Activity(Label = "DamDetailActivity")]
     public class DamDetailActivity : Activity
     {
         private DamRepository _damRepository;
