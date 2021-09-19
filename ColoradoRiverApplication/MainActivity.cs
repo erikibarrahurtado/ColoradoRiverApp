@@ -18,7 +18,7 @@ namespace ColoradoRiverApplication
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
+            var variable = 3;
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
         // adding comment in this launcher screen branch
