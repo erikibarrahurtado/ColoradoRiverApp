@@ -3376,6 +3376,9 @@ namespace ColoradoRiverApplication
 			// aapt resource value: 0x7F070082
 			public const int tooltip_frame_light = 2131165314;
 			
+			// aapt resource value: 0x7F070083
+			public const int topoMap = 2131165315;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
