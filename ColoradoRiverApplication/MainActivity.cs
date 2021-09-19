@@ -19,6 +19,7 @@ namespace ColoradoRiverApplication
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             var variable = 3;
+            var test = 3;
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
         // adding comment in this launcher screen branch
