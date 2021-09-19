@@ -31,10 +31,22 @@ namespace ColoradoRiverApplication
             SetContentView(Resource.Layout.dam_detail);
 
             _damRepository = new DamRepository();
-            _selectedDam = _damRepository.GetDamById(2);
+            var selectedDamId = Intent.Extras.GetInt("selectedDamId");
+            _selectedDam = _damRepository.GetDamById(selectedDamId);
 
             FindViews();
             BindData();
+            LinkEventHandlers();
+        }
+
+        private void LinkEventHandlers()
+        {
+            _goBackButton.Click += _goBackButton_Click;
+        }
+
+        private void _goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Finish();
         }
 
         private void FindViews()
@@ -42,6 +54,7 @@ namespace ColoradoRiverApplication
             _damImageView = FindViewById<ImageView>(Resource.Id.damImageView);
             _damNameTextView = FindViewById<TextView>(Resource.Id.damNameTextView);
             _damDescriptionTextView = FindViewById<TextView>(Resource.Id.damDescriptionTextView);
+            _goBackButton = FindViewById<Button>(Resource.Id.goBackButton);
             _goBackButton = FindViewById<Button>(Resource.Id.goBackButton);
         }
         private void BindData()

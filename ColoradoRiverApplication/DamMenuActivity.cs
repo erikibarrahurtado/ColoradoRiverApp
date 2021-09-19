@@ -15,7 +15,7 @@ using ColoradoRiverApplication.Adapters;
 
 namespace ColoradoRiverApplication
 {
-    [Activity(Label = "DamMenuActivity", MainLauncher = true)]
+    [Activity(Label = "DamMenuActivity")]
     public class DamMenuActivity : Activity
     {
         private RecyclerView _damRecyclerView;
@@ -30,11 +30,21 @@ namespace ColoradoRiverApplication
 
             // pie adapter
             _damLayoutManager = new LinearLayoutManager(this);
+
             _damRecyclerView.SetLayoutManager(_damLayoutManager);
 
             _damAdapter = new DamAdapter();
+            _damAdapter.ItemClick += _damAdapter_ItemClick;
             _damRecyclerView.SetAdapter(_damAdapter);
 
+        }
+
+        private void _damAdapter_ItemClick(object sender, int e)
+        {
+            var intent = new Intent();
+            intent.SetClass(this, typeof(DamDetailActivity));
+            intent.PutExtra("selectedDamId", e);
+            StartActivity(intent);
         }
     }
 }
