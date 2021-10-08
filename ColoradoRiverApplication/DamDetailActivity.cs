@@ -49,7 +49,8 @@ namespace ColoradoRiverApplication
         private void _goBackButton_Click(object sender, EventArgs e)
         {
             _rpiService.Connect();
-            _rpiService.TurnOffFan();
+            
+            _rpiService.TurnOffFan(_selectedDam.DamId);
             this.Finish();
         }
 

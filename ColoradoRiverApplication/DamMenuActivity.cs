@@ -49,7 +49,7 @@ namespace ColoradoRiverApplication
             intent.PutExtra("selectedDamId", e);
             StartActivity(intent);
             _rpiService.Connect();
-            _rpiService.TurnOnFan();
+            _rpiService.TurnOnFan(e);
         }
     }
 }
