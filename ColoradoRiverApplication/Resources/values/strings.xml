@@ -1,5 +1,15 @@
 ﻿<resources>
     <string name="app_name">ColoradoRiverApplication</string>
     <string name="action_settings">Settings</string>
-    <string name="app_description">This is an interactive display of the lower basin of the Colorado River. </string>
+    <string name="landingPage_title">Taming the Mighty Colorado</string>
+    <string name="app_description">This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+        This is an interactive display of the lower basin of the Colorado River.
+    </string>
 </resources>

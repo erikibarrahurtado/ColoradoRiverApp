@@ -5,32 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-	android:background="@drawable/patternwide"
+	android:background="@drawable/headgaterockdamimagedescription"
 	>
 	<TextView
-		android:text="Taming the Mighty Colorado"
+		android:text="@string/landingPage_title"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
         android:textSize="80dp"
-		android:layout_marginTop="10dp"
+		android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
+		android:backgroundTint="#aec6cf"
 		/>
-	<ImageView
-		android:src="@drawable/coloradoriver"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-			
-		 />
+
 	<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 		android:text="@string/app_description"
-		android:gravity="center_horizontal"/>
-	<Button
+		android:gravity="center_horizontal"
+		android:textColor="@android:color/white"
+		android:paddingTop="20dp"
+		android:paddingLeft="250dp"
+		android:paddingRight="250dp"
+		android:textSize="20dp"/>
+
+	 <Button
 		android:text="Let's do this"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:backgroundTint="#23cfa7"
+		android:backgroundTint="#aec6cf"
 		android:id="@+id/letsDoThisButton"
-		android:layout_gravity="center_horizontal"/>
+		android:layout_gravity="center_horizontal"
+		android:textSize="12dp"
+		android:layout_marginTop="20dp"
+	/>
 </LinearLayout>
