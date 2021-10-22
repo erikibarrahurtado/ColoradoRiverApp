@@ -3,6 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/patternwide"
     >
 
         <LinearLayout 
@@ -10,7 +11,7 @@
         android:layout_height="fill_parent" 
         android:layout_width="0dp">
 		<ImageView
-            android:src="@drawable/topomap"
+            android:src="@drawable/coloradoriverbasin"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:minWidth="25px"

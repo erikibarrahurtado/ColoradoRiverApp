@@ -48,6 +48,7 @@ namespace ColoradoRiverApplication
             intent.SetClass(this, typeof(DamDetailActivity));
             intent.PutExtra("selectedDamId", e);
             StartActivity(intent);
+            // UNCOMMENT
             _rpiService.Connect();
             _rpiService.TurnOnFan(e);
         }

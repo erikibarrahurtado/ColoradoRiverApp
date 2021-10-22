@@ -25,7 +25,8 @@ namespace ColoradoRiverApplication
         private TextView _damNameTextView;
         private TextView _damDescriptionTextView;
         private Button _goBackButton;
-        private RaspberryPiService _rpiService;
+        private Button _questionButton;
+        private RaspberryPiService _rpiService; 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -44,12 +45,22 @@ namespace ColoradoRiverApplication
         private void LinkEventHandlers()
         {
             _goBackButton.Click += _goBackButton_Click;
+            _questionButton.Click += _questionButton_Click;
+        }
+
+        private void _questionButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent();
+            intent.SetClass(this, typeof(DamPromptActivity));
+            intent.PutExtra("selectedDamId", _selectedDam.DamId);
+            StartActivity(intent);
         }
 
         private void _goBackButton_Click(object sender, EventArgs e)
         {
+            // UNCOMMENT
             _rpiService.Connect();
-            
+
             _rpiService.TurnOffFan(_selectedDam.DamId);
             this.Finish();
         }
@@ -60,10 +71,11 @@ namespace ColoradoRiverApplication
             _damNameTextView = FindViewById<TextView>(Resource.Id.damNameTextView);
             _damDescriptionTextView = FindViewById<TextView>(Resource.Id.damDescriptionTextView);
             _goBackButton = FindViewById<Button>(Resource.Id.goBackButton);
-            _goBackButton = FindViewById<Button>(Resource.Id.goBackButton);
+            _questionButton = FindViewById<Button>(Resource.Id.questionButton);
+            
         }
         private void BindData()
-        {
+        { 
             _damNameTextView.Text = _selectedDam.Name;
             _damDescriptionTextView.Text = _selectedDam.Description;
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.ImageName).GetValue(null);
