@@ -1,87 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:background="@color/ic_launcher_background"
     >
-	<LinearLayout
+	<TextView
+		android:id="@+id/damNameTextView"
 		android:layout_width="match_parent"
-		android:layout_weight="1"
-		android:layout_height="match_parent"
-		android:orientation="vertical"
-		android:background="@android:drawable/dialog_holo_light_frame"
-		>
-		<TextView
-			android:text="Dam Name"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:id="@+id/damNameTextView"
-			android:textColor="@android:color/black"
-			android:paddingTop="20dp"
-			android:textSize="80dp"
-			android:gravity="center_horizontal"/>
-		<TextView
-			android:text="Description.lorem asdfasdfasdf"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:id="@+id/damDescriptionTextView"
-			android:textColor="@android:color/black"
-			android:paddingTop="20dp"
-			android:textSize="38dp"
-			android:editable="false"
-			
-			
-			
+		android:layout_height="wrap_content"
+		android:background="#2bab2b"
+		android:textSize="90dp"
+		android:text="Title"
+		android:gravity="center_horizontal"
+		android:textColor="@android:color/white"
 		/>
-		<LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			android:gravity="center_horizontal"
-			
-
-			>
-
-			<Button
-				android:text="Go back"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center_horizontal"
-				android:layout_marginTop="20dp"
-				android:width="200dp"
-				android:backgroundTint="#23cfa7"
-				android:id="@+id/goBackButton" />
-			<Button
-				android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center_horizontal"
-				android:layout_marginTop="20dp"
-				android:width="200dp"
-				android:backgroundTint="#23cfa7"
-				android:id="@+id/questionButton" />
-			</LinearLayout>
-	</LinearLayout>
 
 	<LinearLayout
-		
+		android:orientation="horizontal"
 		android:layout_width="match_parent"
-		android:layout_weight="1"
 		android:layout_height="match_parent"
 		android:background="@android:drawable/dialog_holo_light_frame"
+		android:backgroundTint="#ddf6ea"
 		>
 		<ImageView
-		
-		android:layout_width="match_parent"
-		android:layout_height="500dp"
-		android:layout_marginTop="10dp"
-		android:id="@+id/damImageView"
-		android:layout_gravity="center"	
-		/>
+			android:id="@+id/damImageView"
+			android:layout_weight="1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"/>
 
-	</LinearLayout>-->
-	
-	
+		<LinearLayout
+			android:layout_weight="1"
+			android:orientation="vertical"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:gravity="center_vertical"
+			>
+			<TextView
+				android:id="@+id/damDescriptionTextView"
+				android:layout_weight=".3"
+				android:text="Desc"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="@android:color/black"
+				android:textSize="44dp"
+				android:editable="false"
+				android:gravity="center_vertical"/>
 
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:layout_weight=".7">
+				<Button
+					android:id="@+id/goBackButton"
+					android:text="Home"
+					android:layout_weight="0.7"
+					android:backgroundTint="#e599b2"
+					android:textColor="@android:color/white"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@drawable/circlebutton"
+					android:gravity="center"
+					android:textSize="30dp"
+					/>
+				<Button
+					android:id="@+id/questionButton"
+					android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
+					android:layout_weight="0.3"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:backgroundTint="#63d863"
+					android:textColor="@android:color/white"
+					android:background="@drawable/circlebutton"
+					android:textSize="30dp"
+				/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
 </LinearLayout>
