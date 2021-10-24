@@ -44,7 +44,6 @@
 				android:text="Desc"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:textColor="@android:color/black"
 				android:textSize="44dp"
 				android:editable="false"
 				android:gravity="center_vertical"/>

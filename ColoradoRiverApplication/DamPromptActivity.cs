@@ -21,8 +21,8 @@ namespace ColoradoRiverApplication
         private Dam _selectedDam;
         private DamRepository _damRepository;
         private ImageView _damAnswerImageView;
-        private TextView _damNameTextView;
         private TextView _damAnswerDescriptionTextView;
+        private TextView _damAnswerTitleTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,7 +40,7 @@ namespace ColoradoRiverApplication
 
         private void BindData()
         {
-            _damNameTextView.Text = _selectedDam.Name;
+            _damAnswerTitleTextView.Text = _selectedDam.Answer;
             _damAnswerDescriptionTextView.Text = _selectedDam.AnswerDescription;
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.AnswerImageName).GetValue(null);
             _damAnswerImageView.SetImageResource(resImage);
@@ -48,10 +48,9 @@ namespace ColoradoRiverApplication
 
         private void FindViews()
         {
-            _damAnswerImageView = FindViewById<ImageView>(Resource.Id.damAnswerImageView);
-            _damNameTextView = FindViewById<TextView>(Resource.Id.damAnswerNameTextView);
+            _damAnswerTitleTextView = FindViewById<TextView>(Resource.Id.damAnswerTitleTextViewId);
             _damAnswerDescriptionTextView = FindViewById<TextView>(Resource.Id.damAnswerDescriptionTextView);
-
+            _damAnswerImageView = FindViewById<ImageView>(Resource.Id.damAnswerImageView);
         }
     }
 }

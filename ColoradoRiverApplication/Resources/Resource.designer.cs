@@ -3714,7 +3714,7 @@ namespace ColoradoRiverApplication
 			public const int damAnswerImageView = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int damAnswerNameTextView = 2131230810;
+			public const int damAnswerTitleTextViewId = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
 			public const int damDescriptionTextView = 2131230811;
