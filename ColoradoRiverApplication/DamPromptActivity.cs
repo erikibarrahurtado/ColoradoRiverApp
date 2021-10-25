@@ -40,6 +40,14 @@ namespace ColoradoRiverApplication
 
         private void BindData()
         {
+            // if selected Dam is Parker(id = 4), then 
+            if (_selectedDam.DamId == 4)
+            {
+                _damAnswerDescriptionTextView.TextSize = 35;
+            }
+            else if (_selectedDam.DamId == 10) {
+                _damAnswerDescriptionTextView.TextSize = 38;
+            }
             _damAnswerTitleTextView.Text = _selectedDam.Answer;
             _damAnswerDescriptionTextView.Text = _selectedDam.AnswerDescription;
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.AnswerImageName).GetValue(null);
