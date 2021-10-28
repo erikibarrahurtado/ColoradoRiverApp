@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using AndroidX.RecyclerView.Widget;
 using ColoradoRiverApplication.Adapters;
+using ColoradoRiverMobile.Core.Repository;
 using ColoradoRiverMobile.Core.Services;
 
 namespace ColoradoRiverApplication
@@ -23,12 +24,15 @@ namespace ColoradoRiverApplication
         private RecyclerView.LayoutManager _damLayoutManager;
         private DamAdapter _damAdapter;
         private RaspberryPiService _rpiService;
+        private DamRepository _damRepository;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.dam_menu);
+            _damRepository = new DamRepository();
+
             _damRecyclerView = FindViewById<RecyclerView>(Resource.Id.damMenuRecyclerView);
 
             // pie adapter
@@ -49,8 +53,12 @@ namespace ColoradoRiverApplication
             intent.PutExtra("selectedDamId", e);
             StartActivity(intent);
             // UNCOMMENT
+            //_rpiService.Connect();
+            //_rpiService.TurnOnFan(e);
+
             _rpiService.Connect();
-            _rpiService.TurnOnFan(e);
+            var _damSelected = _damRepository.GetDamById(e);
+            _rpiService.TurnOnFan(_damSelected.GPIO);
         }
     }
 }

@@ -23,6 +23,7 @@ namespace ColoradoRiverApplication
         private ImageView _damAnswerImageView;
         private TextView _damAnswerDescriptionTextView;
         private TextView _damAnswerTitleTextView;
+        private Button _gobackButton;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,6 +37,17 @@ namespace ColoradoRiverApplication
 
             FindViews();
             BindData();
+            LinkEventHandlers();
+        }
+
+        private void LinkEventHandlers()
+        {
+            _gobackButton.Click += _goBackButton_Click;
+        }
+
+        private void _goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Finish();
         }
 
         private void BindData()
@@ -59,6 +71,7 @@ namespace ColoradoRiverApplication
             _damAnswerTitleTextView = FindViewById<TextView>(Resource.Id.damAnswerTitleTextViewId);
             _damAnswerDescriptionTextView = FindViewById<TextView>(Resource.Id.damAnswerDescriptionTextView);
             _damAnswerImageView = FindViewById<ImageView>(Resource.Id.damAnswerImageView);
+            _gobackButton = FindViewById<Button>(Resource.Id.goBackButton);
         }
     }
 }
