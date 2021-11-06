@@ -1,41 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-	android:background="@drawable/headgaterockdamimagedescription"
-	>
-	<TextView
-		android:text="@string/landingPage_title"
-		android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/headgaterockdamimagedescription"
+    >
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-        android:textSize="80dp"
-		android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-		android:backgroundTint="#aec6cf"
+		android:id="@+id/HorizontalGuideline1"
+		app:layout_constraintGuide_percent="0.25"
+		android:orientation="horizontal"
+	/>
+    <android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/HorizontalGuideline2"
+		app:layout_constraintGuide_percent="0.45"
+		android:orientation="horizontal"
+	/>
+	 <android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/VerticalGuideline1"
+		app:layout_constraintGuide_percent="0.9"
+		android:orientation="vertical"
+	/>
+		 <android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/VerticalGuideline2"
+		app:layout_constraintGuide_percent="1.0"
+		android:orientation="vertical"
+	/>
+				<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/HorizontalGuideline3"
+		app:layout_constraintGuide_percent="1.0"
+		android:orientation="horizontal"
+		
 		/>
 
 	<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-		android:text="@string/app_description"
-		android:gravity="center_horizontal"
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="7:1"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
+		android:text="Taming the Mighty Colorado"
+		android:gravity="center"
+		android:textSize="90dp"
+		android:background="@drawable/circlebutton"
+		android:backgroundTint="#99000000"
 		android:textColor="@android:color/white"
-		android:paddingTop="20dp"
-		android:paddingLeft="250dp"
-		android:paddingRight="250dp"
-		android:textSize="20dp"/>
+		/>
+	<TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+		android:text="@string/app_description"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+		app:layout_constraintDimensionRatio="6:1"
+		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline1"
+		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:textSize="30dp"
+		android:background="#99000000"
+	
+		/>
 
-	 <Button
-		android:text="Let's do this"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:backgroundTint="#aec6cf"
+
+	<ImageButton
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@drawable/start"
 		android:id="@+id/letsDoThisButton"
-		android:layout_gravity="center_horizontal"
-		android:textSize="12dp"
-		android:layout_marginTop="20dp"
-	/>
-</LinearLayout>
+		app:layout_constraintStart_toStartOf="@id/VerticalGuideline1"
+		app:layout_constraintEnd_toEndOf="@id/VerticalGuideline2"
+		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline3"
+		
+		app:layout_constraintDimensionRatio="1:1"
+		/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

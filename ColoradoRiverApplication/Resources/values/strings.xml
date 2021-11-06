@@ -2,14 +2,9 @@
     <string name="app_name">ColoradoRiverApplication</string>
     <string name="action_settings">Settings</string>
     <string name="landingPage_title">Taming the Mighty Colorado</string>
-    <string name="app_description">This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
-        This is an interactive display of the lower basin of the Colorado River.
+    <string name="app_description">
+        This interactive display provides you with history of the dams located throughout the Colorado River,
+        such as, Hoover Dam, Senator Wash Dam, Parker Dam, among others.
+        \nFun facts are hidden through each window, be careful not to miss any.
     </string>
 </resources>

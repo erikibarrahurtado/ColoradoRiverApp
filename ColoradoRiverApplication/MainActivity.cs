@@ -11,7 +11,7 @@ namespace ColoradoRiverApplication
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        private Button _launchDamMenuButton;
+        private ImageButton _launchDamMenuButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,7 +36,7 @@ namespace ColoradoRiverApplication
 
         private void FindViews()
         {
-            _launchDamMenuButton = FindViewById<Button>(Resource.Id.letsDoThisButton);
+            _launchDamMenuButton = FindViewById<ImageButton>(Resource.Id.letsDoThisButton);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
