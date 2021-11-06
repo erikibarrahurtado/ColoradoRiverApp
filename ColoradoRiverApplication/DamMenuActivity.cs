@@ -52,13 +52,12 @@ namespace ColoradoRiverApplication
             intent.SetClass(this, typeof(DamDetailActivity));
             intent.PutExtra("selectedDamId", e);
             StartActivity(intent);
+
+
             // UNCOMMENT
             //_rpiService.Connect();
-            //_rpiService.TurnOnFan(e);
-
-            _rpiService.Connect();
-            var _damSelected = _damRepository.GetDamById(e);
-            _rpiService.TurnOnFan(_damSelected.GPIO);
+            //var _damSelected = _damRepository.GetDamById(e);
+            //_rpiService.TurnOnFan(_damSelected.GPIO);
         }
     }
 }

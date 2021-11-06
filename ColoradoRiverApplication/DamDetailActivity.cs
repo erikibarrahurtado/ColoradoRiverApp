@@ -60,11 +60,7 @@ namespace ColoradoRiverApplication
         {
             // UNCOMMENT
             //_rpiService.Connect();
-
-            //_rpiService.TurnOffFan(_selectedDam.DamId);
-
-            _rpiService.Connect();
-            _rpiService.TurnOffFan(_selectedDam.GPIO);
+            //_rpiService.TurnOffFan(_selectedDam.GPIO);
 
             this.Finish();
         }

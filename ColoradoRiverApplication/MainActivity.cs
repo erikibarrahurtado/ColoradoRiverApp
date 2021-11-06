@@ -29,7 +29,7 @@ namespace ColoradoRiverApplication
 
         private void _launchDamMenuButton_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(DamMenuActivity));
+            Intent intent = new Intent(this, typeof(DummyDamMenuActivity));
             StartActivity(intent);
 
         }
