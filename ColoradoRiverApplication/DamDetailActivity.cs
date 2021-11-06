@@ -24,7 +24,7 @@ namespace ColoradoRiverApplication
         private ImageView _damImageView;
         private TextView _damNameTextView;
         private TextView _damDescriptionTextView;
-        private Button _goBackButton;
+        private ImageButton _goBackButton;
         private Button _questionButton;
         private RaspberryPiService _rpiService; 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -70,7 +70,7 @@ namespace ColoradoRiverApplication
             _damImageView = FindViewById<ImageView>(Resource.Id.damImageView);
             _damNameTextView = FindViewById<TextView>(Resource.Id.damNameTextView);
             _damDescriptionTextView = FindViewById<TextView>(Resource.Id.damDescriptionTextView);
-            _goBackButton = FindViewById<Button>(Resource.Id.goBackButton);
+            _goBackButton = FindViewById<ImageButton>(Resource.Id.goBackButton);
             _questionButton = FindViewById<Button>(Resource.Id.questionButton);
             
         }

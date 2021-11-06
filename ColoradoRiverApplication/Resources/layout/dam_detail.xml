@@ -1,83 +1,142 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="@color/ic_launcher_background"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+	android:background="#ddf7ea"
     >
-	<TextView
-		android:id="@+id/damNameTextView"
-		android:layout_width="match_parent"
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:id="@+id/HorizontalGuideline1"
+		app:layout_constraintGuide_percent="0.15"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/HorizontalGuideline2"
+		app:layout_constraintGuide_percent="0.70"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/NinetyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.9"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/CenterVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.5"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/eightPercentVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.08"
+		android:orientation="vertical"
+	/>
+			<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/sixtyPercentVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.60"
+		android:orientation="vertical"
+	/>
+		<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fiftyFivePercentVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.55"
+		android:orientation="vertical"
+	/>
+
+    <TextView
+		android:id="@+id/damNameTextView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
 		android:background="#2bab2b"
-		android:textSize="90dp"
+		android:textSize="80dp"
 		android:text="Title"
-		android:gravity="center_horizontal"
+		android:gravity="center"
 		android:textColor="@android:color/white"
 		/>
 
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@android:drawable/dialog_holo_light_frame"
-		android:backgroundTint="#ddf6ea"
-		>
-		<ImageView
+	<ImageView
 			android:id="@+id/damImageView"
-			android:layout_weight="1"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_gravity="center"/>
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_gravity="center"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="@+id/CenterVerticalGuideLine"
+			app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline1"
+			app:layout_constraintBottom_toBottomOf="@id/NinetyHorizontalGuideline"
+			
+		
+		/>
+	<TextView
+		android:id="@+id/damDescriptionTextView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:gravity="center_vertical"
+		android:text="Desc"
+		android:textSize="44dp"
+		android:editable="false"
+		app:layout_constraintStart_toStartOf="@+id/CenterVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline1"
+		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
+		android:paddingLeft="5dp"
+		/>
 
-		<LinearLayout
-			android:layout_weight="1"
-			android:orientation="vertical"
-			android:layout_height="match_parent"
-			android:layout_width="match_parent"
-			android:gravity="center_vertical"
-			>
-			<TextView
-				android:id="@+id/damDescriptionTextView"
-				android:layout_weight=".3"
-				android:text="Desc"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:textSize="44dp"
-				android:editable="false"
-				android:gravity="center_vertical"/>
+	<ImageButton
+		android:id="@+id/goBackButton"
+		android:text="Home"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/eightPercentVerticalGuideLine"
+		app:layout_constraintBottom_toBottomOf="parent"
+		android:background="@drawable/backbuttonimage"
+		app:layout_constraintDimensionRatio="1:1"
+		/>
 
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:orientation="horizontal"
-				android:layout_weight=".7">
-				<Button
-					android:id="@+id/goBackButton"
-					android:text="Home"
-					android:layout_weight="0.7"
-					android:backgroundTint="#e599b2"
-					android:textColor="@android:color/white"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:background="@drawable/circlebutton"
-					android:gravity="center"
-					android:textSize="30dp"
-					/>
-				<Button
-					android:id="@+id/questionButton"
-					android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
-					android:layout_weight="0.3"
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:gravity="center"
-					android:backgroundTint="#63d863"
-					android:textColor="@android:color/white"
-					android:background="@drawable/circlebutton"
-					android:textSize="30dp"
-				/>
-			</LinearLayout>
-		</LinearLayout>
-	</LinearLayout>
-</LinearLayout>
+	<Button
+		android:id="@+id/questionButton"
+		android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:gravity="center"
+		android:textSize="27dp"
+		app:layout_constraintStart_toStartOf="@+id/fiftyFivePercentVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline2"
+		app:layout_constraintBottom_toBottomOf="@id/NinetyHorizontalGuideline"
+		android:background="@drawable/dialogbox"
+		android:paddingLeft="35dp"
+		android:paddingRight="35dp"
+		android:paddingBottom="20dp"
+	/>
+
+	<ImageView
+       android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@drawable/person"
+		app:layout_constraintEnd_toEndOf="@+id/sixtyPercentVerticalGuideLine"
+		app:layout_constraintTop_toTopOf="@id/NinetyHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintDimensionRatio="1:1"
+		/>
+	
+</androidx.constraintlayout.widget.ConstraintLayout>
