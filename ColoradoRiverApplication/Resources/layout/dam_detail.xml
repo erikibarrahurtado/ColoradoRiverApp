@@ -30,6 +30,20 @@
 	<android.support.constraint.Guideline
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:id="@+id/ThreeVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.03"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/ninetySevenVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.97"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:id="@+id/CenterVerticalGuideLine"
 		app:layout_constraintGuide_percent="0.5"
 		android:orientation="vertical"
@@ -60,13 +74,14 @@
 		android:id="@+id/damNameTextView"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/ThreeVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="@+id/ninetySevenVerticalGuideLine"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
-		android:background="#2bab2b"
+		android:background="@drawable/GreenRectangle"
 		android:textSize="80dp"
 		android:text="Title"
+		android:textStyle="bold"
 		android:gravity="center"
 		android:textColor="@android:color/white"
 		/>
@@ -96,6 +111,7 @@
 		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline1"
 		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
 		android:paddingLeft="5dp"
+		android:textColor="@android:color/black"
 		/>
 
 	<ImageButton
@@ -119,6 +135,7 @@
 		android:layout_height="0dp"
 		android:gravity="center"
 		android:textSize="27dp"
+		android:textStyle="italic"
 		app:layout_constraintStart_toStartOf="@+id/fiftyFivePercentVerticalGuideLine"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline2"
