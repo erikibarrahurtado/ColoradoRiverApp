@@ -59,6 +59,7 @@
 		android:textColor="@android:color/white"
 		/>
 	<TextView
+		android:id="@+id/appDescriptionTextViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
 		android:text="@string/app_description"

@@ -264,7 +264,7 @@
     <Folder Include="ViewHolders\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>2.0.1</Version>
     </PackageReference>

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using Xamarin.Essentials;
 
 namespace ColoradoRiverApplication
 {
@@ -12,6 +15,8 @@ namespace ColoradoRiverApplication
     public class MainActivity : AppCompatActivity
     {
         private ImageButton _launchDamMenuButton;
+        private TextView _appDescriptionTextView;
+        CancellationTokenSource cts;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -24,11 +29,12 @@ namespace ColoradoRiverApplication
 
         private void LinkEventHandlers()
         {
-            _launchDamMenuButton.Click += _launchDamMenuButton_Click; 
+            _launchDamMenuButton.Click += _launchDamMenuButton_Click;
         }
 
         private void _launchDamMenuButton_Click(object sender, EventArgs e)
         {
+            CancelSpeech();
             Intent intent = new Intent(this, typeof(DummyDamMenuActivity));
             StartActivity(intent);
 
@@ -37,6 +43,7 @@ namespace ColoradoRiverApplication
         private void FindViews()
         {
             _launchDamMenuButton = FindViewById<ImageButton>(Resource.Id.letsDoThisButton);
+            _appDescriptionTextView = FindViewById<TextView>(Resource.Id.appDescriptionTextViewId);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -44,6 +51,23 @@ namespace ColoradoRiverApplication
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public void CancelSpeech()
+        {
+            if (cts?.IsCancellationRequested ?? true)
+                return;
+
+            cts.Cancel();
+        }
+        protected override void OnResume() {
+            base.OnResume();
+            cts = new CancellationTokenSource();
+            TextToSpeech.SpeakAsync(_appDescriptionTextView.Text, cancelToken: cts.Token).ContinueWith((t) =>
+            {
+                // Logic that will run after utterance finishes.
+
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
     }

@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using ColoradoRiverMobile.Core.Models;
 using ColoradoRiverMobile.Core.Repository;
+using Xamarin.Essentials;
 
 namespace ColoradoRiverApplication
 {
@@ -24,6 +26,7 @@ namespace ColoradoRiverApplication
         private TextView _damAnswerDescriptionTextView;
         private TextView _damAnswerTitleTextView;
         private Button _gobackButton;
+        CancellationTokenSource cts;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,6 +50,7 @@ namespace ColoradoRiverApplication
 
         private void _goBackButton_Click(object sender, EventArgs e)
         {
+            CancelSpeech();
             this.Finish();
         }
 
@@ -72,6 +76,33 @@ namespace ColoradoRiverApplication
             _damAnswerDescriptionTextView = FindViewById<TextView>(Resource.Id.damAnswerDescriptionTextView);
             _damAnswerImageView = FindViewById<ImageView>(Resource.Id.damAnswerImageView);
             _gobackButton = FindViewById<Button>(Resource.Id.goBackButton);
+        }
+
+        public void CancelSpeech()
+        {
+            if (cts?.IsCancellationRequested ?? true)
+                return;
+
+            cts.Cancel();
+        }
+        protected override void OnResume()
+        {
+            base.OnResume();
+            cts = new CancellationTokenSource();
+            StringBuilder sb = new StringBuilder("");
+            sb.Append(_damAnswerTitleTextView.Text + ".");
+            sb.Append("Did you know?\n\n");
+            StringBuilder sbDescription = new StringBuilder(_selectedDam.AnswerDescription);
+            sbDescription.Replace("\n\n", ".\n\n");
+            sb.Append(sbDescription.ToString());
+
+            TextToSpeech.SpeakAsync(sb.ToString(), cancelToken: cts.Token).ContinueWith((t) =>
+            {
+                // Logic that will run after utterance finishes.
+
+            }, TaskScheduler.FromCurrentSynchronizationContext());
+
+
         }
     }
 }
