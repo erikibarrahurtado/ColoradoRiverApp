@@ -63,9 +63,10 @@ namespace ColoradoRiverApplication
 
         private void _goBackButton_Click(object sender, EventArgs e)
         {
-            // UNCOMMENT
-            //_rpiService.Connect();
-            //_rpiService.TurnOffFan(_selectedDam.GPIO);
+
+            // turn off select DamGPIO async 
+            var t = Task.Run(() => _rpiService.ConnectAndTurnOffDamGPIO(_selectedDam.GPIO)); // exception handled.
+
             CancelSpeech();
             this.Finish();
         }

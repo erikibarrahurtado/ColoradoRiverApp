@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -75,23 +75,28 @@ namespace ColoradoRiverApplication
             this.Finish();
         }
 
-        private void _firstRibbon_Click(object sender, EventArgs e)
+        private async void _firstRibbon_Click(object sender, EventArgs e)
         {
 
             ImageButton imageButton = (ImageButton)sender;
             var clickedDamId = imageButton.Tag.ToString();
             var damIdInt = Convert.ToInt32(clickedDamId);
             var intent = new Intent();
-
             intent.SetClass(this, typeof(DamDetailActivity));
             intent.PutExtra("selectedDamId", damIdInt);
             StartActivity(intent);
 
+            var _damSelected = _damRepository.GetDamById(damIdInt);
+            // run task async
+            var t = Task.Run(() => _rpiService.ConnectAndTurnOnDamGPIO(_damSelected.GPIO)); // Exception is handled, if failed to connect, the app will continue running.
+            //t.Wait();
 
-            // UNCOMMENT
+
+            // previous version these would run synchrounously.
             //_rpiService.Connect();
             //var _damSelected = _damRepository.GetDamById(damIdInt);
             //_rpiService.TurnOnFan(_damSelected.GPIO);
+
         }
     }
 }
