@@ -28,7 +28,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/glendamtext"
 		android:id="@+id/Ribbon1"
 		android:tag="1"
 		/>
@@ -39,7 +39,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline2"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/hooverdamtext"
 		android:id="@+id/Ribbon2"
 		android:tag="2"
 		/>
@@ -50,7 +50,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline3"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/davisdamtext"
 		android:id="@+id/Ribbon3"
 		android:tag="3"
 		/>
@@ -61,7 +61,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline4"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/parkerdamtext"
 		android:id="@+id/Ribbon4"
 		android:tag="4"
 		/>
@@ -72,7 +72,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline5"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/headgatedamtext"
 		android:id="@+id/Ribbon5"
 		android:tag="5"
 		/>
@@ -83,7 +83,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline6"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/paloverdetext"
 		android:id="@+id/Ribbon6"
 		android:tag="6"
 		/>
@@ -94,7 +94,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline7"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/senatorwashtext"
 		android:id="@+id/Ribbon7"
 		android:tag="7"
 		/>
@@ -105,7 +105,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline8"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/imperialdamtext"
 		android:id="@+id/Ribbon8"
 		android:tag="8"
 		/>
@@ -116,7 +116,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline9"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/lagunadamtext"
 		android:id="@+id/Ribbon9"
 		android:tag="9"
 		/>
@@ -127,7 +127,7 @@
 		app:layout_constraintStart_toStartOf="@id/guideline1"
 		app:layout_constraintEnd_toEndOf="@id/guideline2"
 		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline10"
-		android:background="@drawable/ribbonNoBlackArea"
+		android:background="@drawable/morelosdamfunfact"
 		android:id="@+id/Ribbon10"
 		android:tag="10"
 		/>
