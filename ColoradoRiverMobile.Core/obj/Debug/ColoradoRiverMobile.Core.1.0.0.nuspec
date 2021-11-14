@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ColoradoRiverMobile.Core</id>
+    <version>1.0.0</version>
+    <authors>Erik Ibarra Hurtado</authors>
+    <description>This package represents the Colorado River dam's data.</description>
+    <repository type="git" url="https://github.com/erikibarrahurtado/ColoradoRiverApp" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Renci.SshNet.Async" version="1.4.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/erik/Desktop/University of Arizona/Fall 2021/CSCV 499/Applications/ColoradoRiverApplication/ColoradoRiverMobile.Core/bin/Debug/netstandard2.1/ColoradoRiverMobile.Core.dll" target="lib/netstandard2.1/ColoradoRiverMobile.Core.dll" />
+  </files>
+</package>

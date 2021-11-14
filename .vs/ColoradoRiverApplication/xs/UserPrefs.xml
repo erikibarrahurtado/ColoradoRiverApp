@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{1346E176-3364-46F2-ACFA-941AD84630F1}|Default">
+  <MonoDevelop.Ide.ItemProperties.ColoradoRiverApplication AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.201902230721" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="ColoradoRiverApplication/Adapters/DamAdapter.cs" Line="44" Column="22" />
+      <File FileName="ColoradoRiverApplication/ViewHolders/DamViewHolder.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ColoradoRiverApplication" expanded="True">
+            <Node name="ColoradoRiverApplication" expanded="True">
+              <Node name="Adapters" expanded="True">
+                <Node name="DamAdapter.cs" selected="True" />
+              </Node>
+              <Node name="Assets" expanded="True" />
+              <Node name="ViewHolders" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../ColoradoRiverApplication/ViewHolders/DamViewHolder.cs" line="14" column="54" endLine="14" endColumn="73" offsetX="-1" offsetY="-1" expression="base.LayoutPosition" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/erik/Desktop/University of Arizona/Fall 2021/CSCV 499/Applications/ColoradoRiverApplication/ColoradoRiverApplication/DamPromptActivity.cs" relfile="ColoradoRiverApplication/DamPromptActivity.cs" line="54" column="1" />
+      <Breakpoint enabled="false" file="/Users/erik/Desktop/University of Arizona/Fall 2021/CSCV 499/Applications/ColoradoRiverApplication/ColoradoRiverApplication/DummyDamMenuActivity.cs" relfile="ColoradoRiverApplication/DummyDamMenuActivity.cs" line="84" column="1" />
+      <Breakpoint enabled="false" file="/Users/erik/Desktop/University of Arizona/Fall 2021/CSCV 499/Applications/ColoradoRiverApplication/ColoradoRiverMobile.Core/Services/RaspberryPiService.cs" relfile="ColoradoRiverMobile.Core/Services/RaspberryPiService.cs" line="25" column="1" />
+      <Breakpoint enabled="false" file="/Users/erik/Desktop/University of Arizona/Fall 2021/CSCV 499/Applications/ColoradoRiverApplication/ColoradoRiverApplication/DamDetailActivity.cs" relfile="ColoradoRiverApplication/DamDetailActivity.cs" line="70" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
