@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.810.9
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoradoRiverApplication", "ColoradoRiverApplication\ColoradoRiverApplication.csproj", "{1346E176-3364-46F2-ACFA-941AD84630F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoradoRiverMobile.Core", "ColoradoRiverMobile.Core\ColoradoRiverMobile.Core.csproj", "{99001A72-17A7-4117-A61C-D040E40FA071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColoradoRiverMobile.Core", "ColoradoRiverMobile.Core\ColoradoRiverMobile.Core.csproj", "{99001A72-17A7-4117-A61C-D040E40FA071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +15,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1346E176-3364-46F2-ACFA-941AD84630F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1346E176-3364-46F2-ACFA-941AD84630F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1346E176-3364-46F2-ACFA-941AD84630F1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{1346E176-3364-46F2-ACFA-941AD84630F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1346E176-3364-46F2-ACFA-941AD84630F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1346E176-3364-46F2-ACFA-941AD84630F1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{99001A72-17A7-4117-A61C-D040E40FA071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99001A72-17A7-4117-A61C-D040E40FA071}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99001A72-17A7-4117-A61C-D040E40FA071}.Release|Any CPU.ActiveCfg = Release|Any CPU
