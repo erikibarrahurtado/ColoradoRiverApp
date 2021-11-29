@@ -7,8 +7,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.Res;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
+using Android.Text;
+using Android.Text.Style;
 using Android.Views;
 using Android.Widget;
 using ColoradoRiverMobile.Core.Models;
@@ -78,17 +82,43 @@ namespace ColoradoRiverApplication
             _damDescriptionTextView = FindViewById<TextView>(Resource.Id.damDescriptionTextView);
             _goBackButton = FindViewById<ImageButton>(Resource.Id.goBackButton);
             _questionButton = FindViewById<Button>(Resource.Id.questionButton);
-            
+
         }
         private void BindData()
         {
             _questionButton.Text = _selectedDam.Question;
             _damNameTextView.Text = _selectedDam.Name;
-            _damDescriptionTextView.Text = _selectedDam.Description;
+
+            var arr = _selectedDam.Description.Split("\n") ;
+
+            int bulletGap = 13;
+
+            SpannableStringBuilder ssb = new SpannableStringBuilder();
+
+            for (int i = 0; i <  arr.Length; i++)
+            {
+                string line = arr[i];
+                SpannableString ss = new SpannableString(line);
+                ss.SetSpan(new BulletSpan(bulletGap), 0, line.Length, SpanTypes.ExclusiveExclusive);
+                ssb.Append(ss);
+
+                if (i+1< arr.Length)
+                    ssb.Append("\n\n");
+            }
+
+            _damDescriptionTextView.TextFormatted = ssb;
+
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.ImageName).GetValue(null);
             _damImageView.SetImageResource(resImage);
             _rpiService = new RaspberryPiService();
-           
+
+            // set fonts
+            var font = Typeface.CreateFromAsset(this.ApplicationContext.Assets, "EBGaramondVariableFont.ttf");
+            _damNameTextView.SetTypeface(font, TypefaceStyle.Bold);
+            _damDescriptionTextView.SetTypeface(font, TypefaceStyle.Normal);
+            _questionButton.SetTypeface(font, TypefaceStyle.Normal);
+
+
         }
         public void CancelSpeech()
         {
@@ -105,7 +135,7 @@ namespace ColoradoRiverApplication
             sb.Append(_damNameTextView.Text + ".");
 
             StringBuilder sbDescription = new StringBuilder(_selectedDam.Description);
-            sbDescription.Replace("\n\n", ".\n\n");
+            sbDescription.Replace("\n", ".\n");
             sb.Append(sbDescription.ToString());
 
             TextToSpeech.SpeakAsync(sb.ToString(), cancelToken: cts.Token).ContinueWith((t) =>

@@ -8,18 +8,38 @@
     >
 
 	<TextView
+		android:id="@+id/TamingTheMightyId"
         android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintDimensionRatio="7:1"
+		app:layout_constraintDimensionRatio="10:1"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="@id/fourteenHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/twentyFourHorizontalGuideline"
+		android:text="Taming The Mighty"
+		android:gravity="center"
+		android:textSize="70dp"
+		android:backgroundTint="#99000000"
+		android:textColor="@android:color/white"
+	    android:letterSpacing="0.1"
+
+		/>
+
+	<TextView
+		android:id="@+id/appTitleTextViewId"
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="10:1"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/twentyHorizontalGuideline"
 		app:layout_constraintBottom_toBottomOf="@id/thirtySevenHorizontalGuideline"
 		android:text="@string/landingPage_title"
 		android:gravity="center"
-		android:textSize="90dp"
+		android:textSize="125dp"
 		android:backgroundTint="#99000000"
-		android:textColor="@android:color/white"
+		android:textColor="#ffc87c"
+		android:letterSpacing="0.1"
 		/>
 
 	<TextView
@@ -52,6 +72,20 @@
 	<android.support.constraint.Guideline
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:id="@+id/twentyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.21"
+		android:orientation="horizontal"
+	/>
+		<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/twentyFourHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.24"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:id="@+id/fourteenHorizontalGuideline"
 		app:layout_constraintGuide_percent="0.14"
 		android:orientation="horizontal"
@@ -67,7 +101,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/thirtySevenHorizontalGuideline"
-		app:layout_constraintGuide_percent="0.37"
+		app:layout_constraintGuide_percent="0.35"
 		android:orientation="horizontal"
 	/>
 	

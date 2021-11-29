@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -16,6 +17,8 @@ namespace ColoradoRiverApplication
     {
         private ImageButton _launchDamMenuButton;
         private TextView _appDescriptionTextView;
+        private TextView _appTitleTextView;
+        private TextView _secondAppTitleTextView;
         CancellationTokenSource cts;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,6 +27,7 @@ namespace ColoradoRiverApplication
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             FindViews();
+            BindData();
             LinkEventHandlers();
         }
 
@@ -44,6 +48,17 @@ namespace ColoradoRiverApplication
         {
             _launchDamMenuButton = FindViewById<ImageButton>(Resource.Id.letsDoThisButton);
             _appDescriptionTextView = FindViewById<TextView>(Resource.Id.appDescriptionTextViewId);
+            _appTitleTextView = FindViewById<TextView>(Resource.Id.appTitleTextViewId);
+            _secondAppTitleTextView = FindViewById<TextView>(Resource.Id.TamingTheMightyId);
+
+        }
+        private void BindData()
+        {
+            // set fonts
+            var font = Typeface.CreateFromAsset(this.ApplicationContext.Assets, "EBGaramondVariableFont.ttf");
+            _appDescriptionTextView.SetTypeface(font, TypefaceStyle.Normal);
+            _appTitleTextView.SetTypeface(font, TypefaceStyle.Bold);
+            _secondAppTitleTextView.SetTypeface(font, TypefaceStyle.Normal);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
