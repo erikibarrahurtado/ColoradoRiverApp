@@ -21,7 +21,7 @@ using Xamarin.Essentials;
 namespace ColoradoRiverApplication
 {
     [Activity(Label = "DamPromptActivity")]
-    public class DamPromptActivity : Activity
+    public class DamAnswerActivity : Activity
     {
         private Dam _selectedDam;
         private DamRepository _damRepository;

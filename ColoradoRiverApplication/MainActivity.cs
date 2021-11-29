@@ -39,7 +39,7 @@ namespace ColoradoRiverApplication
         private void _launchDamMenuButton_Click(object sender, EventArgs e)
         {
             CancelSpeech();
-            Intent intent = new Intent(this, typeof(DummyDamMenuActivity));
+            Intent intent = new Intent(this, typeof(DamMenuCustomerUIActivity));
             StartActivity(intent);
 
         }

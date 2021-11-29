@@ -67,8 +67,8 @@
     <Compile Include="DamMenuActivity.cs" />
     <Compile Include="Adapters\DamAdapter.cs" />
     <Compile Include="ViewHolders\DamViewHolder.cs" />
-    <Compile Include="DamPromptActivity.cs" />
-    <Compile Include="DummyDamMenuActivity.cs">
+    <Compile Include="DamAnswerActivity.cs" />
+    <Compile Include="DamMenuCustomerUIActivity.cs">
       <IncludeInPackage>false</IncludeInPackage>
     </Compile>
   </ItemGroup>

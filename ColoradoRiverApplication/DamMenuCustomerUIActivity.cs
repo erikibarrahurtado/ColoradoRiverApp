@@ -16,7 +16,7 @@ using ColoradoRiverMobile.Core.Services;
 namespace ColoradoRiverApplication
 {
     [Activity(Label = "DummyDamMenuActivity")]
-    public class DummyDamMenuActivity : Activity
+    public class DamMenuCustomerUIActivity : Activity
     {
         private RaspberryPiService _rpiService;
         private DamRepository _damRepository;
@@ -57,16 +57,16 @@ namespace ColoradoRiverApplication
         private void LinkEventHandlers()
         {
 
-            _Ribbon1.Click += _firstRibbon_Click;
-            _Ribbon2.Click += _firstRibbon_Click;
-            _Ribbon3.Click += _firstRibbon_Click;
-            _Ribbon4.Click += _firstRibbon_Click;
-            _Ribbon5.Click += _firstRibbon_Click;
-            _Ribbon6.Click += _firstRibbon_Click;
-            _Ribbon7.Click += _firstRibbon_Click;
-            _Ribbon8.Click += _firstRibbon_Click;
-            _Ribbon9.Click += _firstRibbon_Click;
-            _Ribbon10.Click += _firstRibbon_Click;
+            _Ribbon1.Click += _Ribbon_Click;
+            _Ribbon2.Click += _Ribbon_Click;
+            _Ribbon3.Click += _Ribbon_Click;
+            _Ribbon4.Click += _Ribbon_Click;
+            _Ribbon5.Click += _Ribbon_Click;
+            _Ribbon6.Click += _Ribbon_Click;
+            _Ribbon7.Click += _Ribbon_Click;
+            _Ribbon8.Click += _Ribbon_Click;
+            _Ribbon9.Click += _Ribbon_Click;
+            _Ribbon10.Click += _Ribbon_Click;
             _HomeButton.Click += _HomeButton_Click;
         }
 
@@ -75,7 +75,7 @@ namespace ColoradoRiverApplication
             this.Finish();
         }
 
-        private async void _firstRibbon_Click(object sender, EventArgs e)
+        private async void _Ribbon_Click(object sender, EventArgs e)
         {
 
             ImageButton imageButton = (ImageButton)sender;
