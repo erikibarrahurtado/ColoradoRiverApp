@@ -4,60 +4,44 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@drawable/headgaterockdamimagedescription"
+    android:background="@drawable/startBackgroundImage"
     >
-	<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/HorizontalGuideline1"
-		app:layout_constraintGuide_percent="0.25"
-		android:orientation="horizontal"
-	/>
-    <android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/HorizontalGuideline2"
-		app:layout_constraintGuide_percent="0.45"
-		android:orientation="horizontal"
-	/>
-	 <android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/VerticalGuideline1"
-		app:layout_constraintGuide_percent="0.9"
-		android:orientation="vertical"
-	/>
-		 <android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/VerticalGuideline2"
-		app:layout_constraintGuide_percent="1.0"
-		android:orientation="vertical"
-	/>
-				<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/HorizontalGuideline3"
-		app:layout_constraintGuide_percent="1.0"
-		android:orientation="horizontal"
-		
+
+	<TextView
+		android:id="@+id/TamingTheMightyId"
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="10:1"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/fourteenHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/twentyFourHorizontalGuideline"
+		android:text="Taming The Mighty"
+		android:gravity="center"
+		android:textSize="70dp"
+		android:backgroundTint="#99000000"
+		android:textColor="@android:color/white"
+	    android:letterSpacing="0.1"
+
 		/>
 
 	<TextView
+		android:id="@+id/appTitleTextViewId"
         android:layout_width="0dp"
 		android:layout_height="0dp"
-		app:layout_constraintDimensionRatio="7:1"
+		app:layout_constraintDimensionRatio="10:1"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
-		android:text="Taming the Mighty Colorado"
+		app:layout_constraintTop_toTopOf="@id/twentyHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/thirtySevenHorizontalGuideline"
+		android:text="@string/landingPage_title"
 		android:gravity="center"
-		android:textSize="90dp"
-		android:background="@drawable/circlebutton"
+		android:textSize="125dp"
 		android:backgroundTint="#99000000"
-		android:textColor="@android:color/white"
+		android:textColor="#ffc87c"
+		android:letterSpacing="0.1"
 		/>
+
 	<TextView
 		android:id="@+id/appDescriptionTextViewId"
         android:layout_width="0dp"
@@ -65,27 +49,90 @@
 		android:text="@string/app_description"
 		android:gravity="center"
 		android:textColor="@android:color/white"
-		app:layout_constraintDimensionRatio="6:1"
-		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline1"
-		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
+		app:layout_constraintDimensionRatio="9:1"
+		app:layout_constraintTop_toTopOf="@id/thirtyFiveHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/fiftyHorizontalGuideline"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		android:textSize="30dp"
-		android:background="#99000000"
-	
+		android:background="@drawable/descriptionStartHolderImage"
+		android:padding="10dp"
 		/>
-
 
 	<ImageButton
         android:layout_width="0dp"
 		android:layout_height="0dp"
-		android:background="@drawable/start"
+		android:background="@drawable/startHandButton"
 		android:id="@+id/letsDoThisButton"
-		app:layout_constraintStart_toStartOf="@id/VerticalGuideline1"
-		app:layout_constraintEnd_toEndOf="@id/VerticalGuideline2"
-		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline3"
-		
+		app:layout_constraintStart_toStartOf="@id/fortyThreeVerticalGuideline"
+		app:layout_constraintEnd_toEndOf="@id/fiftySevenVerticalGuideline"
+		app:layout_constraintBottom_toTopOf="@id/ninetyHorizontalGuideline"
 		app:layout_constraintDimensionRatio="1:1"
 		/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/twentyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.21"
+		android:orientation="horizontal"
+	/>
+		<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/twentyFourHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.24"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fourteenHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.14"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/thirtyFiveHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.35"
+		android:orientation="horizontal"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/thirtySevenHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.35"
+		android:orientation="horizontal"
+	/>
+	
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fiftyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.50"
+		android:orientation="horizontal"
+	/>
 
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/ninetyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.90"
+		android:orientation="horizontal"
+	/>
+
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fortyThreeVerticalGuideline"
+		app:layout_constraintGuide_percent="0.43"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fiftySevenVerticalGuideline"
+		app:layout_constraintGuide_percent="0.57"
+		android:orientation="vertical"
+	/>
 </androidx.constraintlayout.widget.ConstraintLayout>

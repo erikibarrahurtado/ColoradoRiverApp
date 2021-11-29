@@ -34,7 +34,7 @@ namespace ColoradoRiverApplication
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.DummyDam_menu);
+            SetContentView(Resource.Layout.damm_menu_customerUI);
             _rpiService = new RaspberryPiService();
             _damRepository = new DamRepository();
             BindViews();

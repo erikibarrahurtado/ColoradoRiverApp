@@ -4,20 +4,145 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-	android:background="#ddf7ea"
+	android:background="#dfc7a7"
     >
-	<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/HorizontalGuideline1"
-		app:layout_constraintGuide_percent="0.15"
-		android:orientation="horizontal"
-	/>
+
 	<android.support.constraint.Guideline
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/HorizontalGuideline2"
-		app:layout_constraintGuide_percent="0.70"
+		app:layout_constraintGuide_percent="0.74"
+		android:orientation="horizontal"
+	/>
+	
+		
+	<ImageView
+			android:id="@+id/damImageView"
+			android:layout_width="@+id/fiftyVerticalGuideLine"
+			android:layout_height="match_parent"
+			app:layout_constraintStart_toStartOf="parent"
+		    app:layout_constraintEnd_toEndOf="@+id/fiftyVerticalGuideLine"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintDimensionRatio="5:5"
+
+		
+		/>
+	 <TextView
+		android:id="@+id/damNameTextView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintStart_toStartOf="@+id/fortySevenVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="@+id/ninetySevenVerticalGuideLine"
+		app:layout_constraintTop_toTopOf="@+id/sevenHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/twentyHorizontalGuideline"
+		android:background="@drawable/greenBackgroundRibbon"
+		android:textSize="80dp"
+		android:text="Title"
+		android:textStyle="bold"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+		/>
+		<TextView
+		android:id="@+id/damDescriptionTextView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:gravity="center_vertical"
+		android:text="Desc"
+		android:textSize="41dp"
+		android:textStyle="bold"
+		android:editable="false"
+		app:layout_constraintStart_toStartOf="@+id/fiftyFourVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="@+id/ninetySevenVerticalGuideLine"
+		app:layout_constraintTop_toTopOf="@id/twentyHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
+		android:textColor="@android:color/black"
+		android:layout_marginLeft="15dp"
+		/>
+
+	<Button
+		android:id="@+id/questionButton"
+		android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:gravity="center"
+		android:textSize="27dp"
+		android:textStyle="italic"
+		android:textColor="#286a81"
+		app:layout_constraintStart_toStartOf="@+id/fiftyFourVerticalGuideLine"
+		app:layout_constraintEnd_toEndOf="@+id/ninetySevenVerticalGuideLine"
+		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline2"
+		app:layout_constraintBottom_toBottomOf="@id/NinetyTwoHorizontalGuideline"
+		android:background="@drawable/questionImage"
+		android:paddingLeft="140dp"
+		android:paddingRight="20dp"
+	/>
+
+		<ImageButton
+		android:id="@+id/goBackButton"
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@drawable/previousBtn"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="@+id/tenVerticalGuideLine"
+		app:layout_constraintTop_toTopOf="@id/NinetyHorizontalGuideline"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintDimensionRatio="4:1"
+		/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/tenVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.10"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fortySevenVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.47"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fiftyVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.50"
+		android:orientation="vertical"
+	/><android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/fiftyFourVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.54"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/sixtyFourVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.64"
+		android:orientation="vertical"
+	/>
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/ninetySevenVerticalGuideLine"
+		app:layout_constraintGuide_percent="0.97"
+		android:orientation="vertical"
+	/>
+
+	<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/sevenHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.07"
+		android:orientation="horizontal"
+	/>
+		<android.support.constraint.Guideline
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/twentyHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.20"
 		android:orientation="horizontal"
 	/>
 	<android.support.constraint.Guideline
@@ -30,130 +155,8 @@
 	<android.support.constraint.Guideline
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/ThreeVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.03"
-		android:orientation="vertical"
+		android:id="@+id/NinetyTwoHorizontalGuideline"
+		app:layout_constraintGuide_percent="0.92"
+		android:orientation="horizontal"
 	/>
-	<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/ninetySevenVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.97"
-		android:orientation="vertical"
-	/>
-	<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/CenterVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.5"
-		android:orientation="vertical"
-	/>
-	<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/eightPercentVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.08"
-		android:orientation="vertical"
-	/>
-			<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/sixtyPercentVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.60"
-		android:orientation="vertical"
-	/>
-		<android.support.constraint.Guideline
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/fiftyFivePercentVerticalGuideLine"
-		app:layout_constraintGuide_percent="0.55"
-		android:orientation="vertical"
-	/>
-
-    <TextView
-		android:id="@+id/damNameTextView"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		app:layout_constraintStart_toStartOf="@+id/ThreeVerticalGuideLine"
-		app:layout_constraintEnd_toEndOf="@+id/ninetySevenVerticalGuideLine"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintBottom_toTopOf="@id/HorizontalGuideline1"
-		android:background="@drawable/GreenRectangle"
-		android:textSize="80dp"
-		android:text="Title"
-		android:textStyle="bold"
-		android:gravity="center"
-		android:textColor="@android:color/white"
-		/>
-
-	<ImageView
-			android:id="@+id/damImageView"
-			android:layout_width="0dp"
-			android:layout_height="0dp"
-			android:layout_gravity="center"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="@+id/CenterVerticalGuideLine"
-			app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline1"
-			app:layout_constraintBottom_toBottomOf="@id/NinetyHorizontalGuideline"
-			
-		
-		/>
-	<TextView
-		android:id="@+id/damDescriptionTextView"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:gravity="center_vertical"
-		android:text="Desc"
-		android:textSize="44dp"
-		android:editable="false"
-		app:layout_constraintStart_toStartOf="@+id/CenterVerticalGuideLine"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline1"
-		app:layout_constraintBottom_toBottomOf="@id/HorizontalGuideline2"
-		android:paddingLeft="5dp"
-		android:textColor="@android:color/black"
-		/>
-
-	<ImageButton
-		android:id="@+id/goBackButton"
-		android:text="Home"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:layout_gravity="center"
-		android:gravity="center"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="@id/eightPercentVerticalGuideLine"
-		app:layout_constraintBottom_toBottomOf="parent"
-		android:background="@drawable/backbuttonimage"
-		app:layout_constraintDimensionRatio="1:1"
-		/>
-
-	<Button
-		android:id="@+id/questionButton"
-		android:text="How many people do you think visit Glen Canyon Recreation Area annually?"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:gravity="center"
-		android:textSize="27dp"
-		android:textStyle="italic"
-		app:layout_constraintStart_toStartOf="@+id/fiftyFivePercentVerticalGuideLine"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="@id/HorizontalGuideline2"
-		app:layout_constraintBottom_toBottomOf="@id/NinetyHorizontalGuideline"
-		android:background="@drawable/dialogbox"
-		android:paddingLeft="35dp"
-		android:paddingRight="35dp"
-		android:paddingBottom="20dp"
-	/>
-
-	<ImageView
-       android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:background="@drawable/person"
-		app:layout_constraintEnd_toEndOf="@+id/sixtyPercentVerticalGuideLine"
-		app:layout_constraintTop_toTopOf="@id/NinetyHorizontalGuideline"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintDimensionRatio="1:1"
-		/>
-	
 </androidx.constraintlayout.widget.ConstraintLayout>

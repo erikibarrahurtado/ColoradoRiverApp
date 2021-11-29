@@ -1,10 +1,9 @@
 ﻿<resources>
     <string name="app_name">ColoradoRiverApplication</string>
     <string name="action_settings">Settings</string>
-    <string name="landingPage_title">Taming the Mighty Colorado</string>
+    <string name="landingPage_title">Colorado River</string>
     <string name="app_description">
-        This interactive display provides you with history of the dams located throughout the Colorado River,
-        such as, Hoover Dam, Senator Wash Dam, Parker Dam, among others.
-        \nFun facts are hidden through each window, be careful not to miss any.
+       This interactive display presents the history of the dams that reshaped the once mighty
+	   \nColorado River into a controlled water system that is the lifeblood of an arid region.
     </string>
 </resources>

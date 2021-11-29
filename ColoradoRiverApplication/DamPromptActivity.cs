@@ -7,8 +7,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
+using Android.Text;
+using Android.Text.Style;
 using Android.Views;
 using Android.Widget;
 using ColoradoRiverMobile.Core.Models;
@@ -25,14 +28,14 @@ namespace ColoradoRiverApplication
         private ImageView _damAnswerImageView;
         private TextView _damAnswerDescriptionTextView;
         private TextView _damAnswerTitleTextView;
-        private Button _gobackButton;
+        private ImageButton _gobackButton;
         CancellationTokenSource cts;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.dam_prompt);
+            SetContentView(Resource.Layout.dam_answer);
 
             _damRepository = new DamRepository();
             var selectedDamId = Intent.Extras.GetInt("selectedDamId");
@@ -65,9 +68,34 @@ namespace ColoradoRiverApplication
                 _damAnswerDescriptionTextView.TextSize = 38;
             }
             _damAnswerTitleTextView.Text = _selectedDam.Answer;
-            _damAnswerDescriptionTextView.Text = _selectedDam.AnswerDescription;
+
+            var arr = _selectedDam.AnswerDescription.Split("\n") ;
+
+            int bulletGap = 13;
+
+            SpannableStringBuilder ssb = new SpannableStringBuilder();
+
+            for (int i = 0; i <  arr.Length; i++)
+            {
+                string line = arr[i];
+                SpannableString ss = new SpannableString(line);
+                ss.SetSpan(new BulletSpan(bulletGap), 0, line.Length, SpanTypes.ExclusiveExclusive);
+                ssb.Append(ss);
+
+                if (i+1< arr.Length)
+                    ssb.Append("\n\n");
+            }
+
+            _damAnswerDescriptionTextView.TextFormatted = ssb;
             int resImage = (int)typeof(Resource.Drawable).GetField(_selectedDam.AnswerImageName).GetValue(null);
             _damAnswerImageView.SetImageResource(resImage);
+
+
+            // set fonts
+            var font = Typeface.CreateFromAsset(this.ApplicationContext.Assets, "EBGaramondVariableFont.ttf");
+            _damAnswerDescriptionTextView.SetTypeface(font, TypefaceStyle.Normal);
+            _damAnswerTitleTextView.SetTypeface(font, TypefaceStyle.Bold);
+
         }
 
         private void FindViews()
@@ -75,7 +103,7 @@ namespace ColoradoRiverApplication
             _damAnswerTitleTextView = FindViewById<TextView>(Resource.Id.damAnswerTitleTextViewId);
             _damAnswerDescriptionTextView = FindViewById<TextView>(Resource.Id.damAnswerDescriptionTextView);
             _damAnswerImageView = FindViewById<ImageView>(Resource.Id.damAnswerImageView);
-            _gobackButton = FindViewById<Button>(Resource.Id.goBackButton);
+            _gobackButton = FindViewById<ImageButton>(Resource.Id.goBackButton);
         }
 
         public void CancelSpeech()
@@ -93,7 +121,7 @@ namespace ColoradoRiverApplication
             sb.Append(_damAnswerTitleTextView.Text + ".");
             sb.Append("Did you know?\n\n");
             StringBuilder sbDescription = new StringBuilder(_selectedDam.AnswerDescription);
-            sbDescription.Replace("\n\n", ".\n\n");
+            sbDescription.Replace("\n", ".\n");
             sb.Append(sbDescription.ToString());
 
             TextToSpeech.SpeakAsync(sb.ToString(), cancelToken: cts.Token).ContinueWith((t) =>
