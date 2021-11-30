@@ -126,43 +126,13 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\topoMap.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\wahweapMarinaGlenCanyonDam.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\HooverDamUnderConstructionAnswerImage.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\ColoradoRiverBasin.jpg">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\CircleButton.xml">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\mapwitharrows.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\ribbonNoBlackArea.png">
       <SubType>
       </SubType>
       <Generator>
@@ -175,12 +145,6 @@
       </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\start.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\backButtonImage.png">
       <SubType>
       </SubType>
       <Generator>
@@ -205,12 +169,6 @@
       </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\GreenRectangle.xml">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\morelosdamfunfact.png">
       <SubType>
       </SubType>
       <Generator>
