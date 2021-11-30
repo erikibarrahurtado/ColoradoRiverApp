@@ -64,7 +64,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DamDetailActivity.cs" />
-    <Compile Include="DamMenuActivity.cs" />
     <Compile Include="Adapters\DamAdapter.cs" />
     <Compile Include="ViewHolders\DamViewHolder.cs" />
     <Compile Include="DamAnswerActivity.cs" />
@@ -121,12 +120,6 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\dam_menu.xml">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\Dam_ViewHolder.xml">
       <SubType>
       </SubType>
@@ -152,12 +145,6 @@
       </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\wahweapMarinaGlenCanyonDam.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\dam_prompt.xml">
       <SubType>
       </SubType>
       <Generator>
@@ -272,12 +259,6 @@
       </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\CircleButton.xml">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\DummyDam_menu.xml">
       <SubType>
       </SubType>
       <Generator>
