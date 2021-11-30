@@ -60,7 +60,7 @@ namespace ColoradoRiverApplication
         {
             CancelSpeech();
             var intent = new Intent();
-            intent.SetClass(this, typeof(DamPromptActivity));
+            intent.SetClass(this, typeof(DamAnswerActivity));
             intent.PutExtra("selectedDamId", _selectedDam.DamId);
             StartActivity(intent);
         }
