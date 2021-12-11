@@ -13,7 +13,7 @@ namespace ColoradoRiverMobile.Core.Services
 
         public RaspberryPiService()
         {
-            this.host = "192.168.0.102";
+            this.host = "192.168.0.179";
             this.username = "pi";
             this.password = "raspberry";
         }
